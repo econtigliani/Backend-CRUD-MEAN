@@ -1,7 +1,9 @@
-const exrpress = require('express')
+const express = require('express')
+const conectarDB = require('./config/db')
 
-const app = exrpress()
 
+const app = express()
+conectarDB();
 app.get('/', (req,res)=>{
     res.send('Hola mundo!')
 })
